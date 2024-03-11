@@ -1,0 +1,369 @@
+body {
+    background: radial-gradient(circle at center, #fa7831, #fff7cb 70%, #f19b9b);
+}
+
+.container {
+    display: flex;
+}
+
+header {
+    /* display: none; */
+}
+
+
+.toolbar {
+    display: block;
+    text-align: center;
+    background-color: #282CAF;
+    margin: 5px 0px;
+    padding: 4px;
+    position: sticky;
+    top: 0;
+    z-index: 0; /* Set a high z-index value if needed */
+    border-radius: 10px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+
+}
+
+#merge_button {
+    display: inline-block;
+    background-color: #5F6F52;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.sidebar {
+    background-color: #282CAF;
+    color: #fff;
+    height: 770px; /* Set a fixed height to the sidebar */
+    width: 179px;
+    overflow: auto; /* Allow for scrolling when content exceeds the fixed height */
+    position: fixed;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+
+
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px; /* Add padding to avoid content overlapping with the sidebar */
+    margin-left: 180px;
+    text-align: center;
+}
+
+/* Media query for screens with a max-width of 768px */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Make the sidebar full width */
+    }
+}
+
+li {
+    list-style-type: none;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+header ul {
+    display: inline;
+}
+
+header li {
+    display: inline;
+}
+
+img {
+    margin: 10px;
+}
+
+#pdf-canvas {
+    width: 800px;
+    
+}
+
+#canvas {
+    width: 800px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+display: inline-block;
+}
+
+#text-layer { 
+    position: absolute;
+     left: 0;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     overflow: hidden;
+     opacity: 0.2;
+     line-height: 1.0;
+ }
+ 
+ #text-layer > div {
+     color: transparent;
+     position: absolute;
+     white-space: pre;
+     cursor: text;
+     transform-origin: 0% 0%;
+ }
+
+
+#page-thumbnails img:hover {
+    cursor: grab;
+}
+
+#page-thumbnails img:active {
+    cursor: grabbing;
+}
+
+#page-thumbnails button#delete {
+    position: absolute;
+    left: 50%;
+    /* top: 50%;
+    left: 50%; */
+    transform: translate(20%, 350%);
+    padding: 3px 6px;
+    background-color:#f45353;
+    color: #FEFAE0;
+    border-radius: 5px;
+    background-image: url(trash.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   height: 36px;
+   width: 36px;
+   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+   cursor: pointer; 
+   opacity: 0.4;
+}
+
+#page-thumbnails button#delete:hover {
+    opacity: 0.8;
+}
+
+#page-thumbnails button#download {
+    position: absolute;
+    left: 50%;
+    /* top: 50%;
+    left: 50%; */
+    transform: translate(-120%, 350%);
+    padding: 3px 6px;
+    background-color:#9B9BF1;
+    color: #FEFAE0;
+    border-radius: 5px;
+    background-image: url(download-arrow.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   height: 36px;
+   width: 36px;
+   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+   cursor: pointer; 
+   opacity: 0.4;
+}
+
+#page-thumbnails button#download:hover {
+    opacity: 0.8;
+}
+
+#toolbar-button {
+    display: inline-block;
+    background-color: #4747f8;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+#merge_button {
+    width: 100px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack icon and text in a column */
+    align-items: center; /* Center items horizontally */
+    border-radius: 10px;
+    background-color: #9B9BF1;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+    padding: 1px; /* Adjust padding as needed */
+}
+
+#save_button {
+    width: 100px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack icon and text in a column */
+    align-items: center; /* Center items horizontally */
+    border-radius: 10px;
+    background-color: #9B9BF1;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+    padding: 1px; /* Adjust padding as needed */
+}
+
+#extract_button {
+    width: 100px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack icon and text in a column */
+    align-items: center; /* Center items horizontally */
+    border-radius: 10px;
+    background-color: #9B9BF1;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+    padding: 1px; /* Adjust padding as needed */
+}
+
+#back_button {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #9B9BF1;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+    padding: 1px;
+}
+
+#redu_button {
+    width: 30px;
+    height: 30px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack icon and text in a column */
+    align-items: center; /* Center items horizontally */
+    border-radius: 10px;
+    background-color: #9B9BF1;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+    padding: 1px; /* Adjust padding as needed */
+    margin-bottom: 5px;
+    
+}
+
+#undo_button {
+    width: 30px;
+    height: 30px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack icon and text in a column */
+    align-items: center; /* Center items horizontally */
+    border-radius: 10px;
+    background-color: #9B9BF1;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+    padding: 1px; /* Adjust padding as needed */
+}
+
+#small-button-icon {
+    width: 16px;
+    height: 16px;
+}
+
+#button-icon {
+    width: 32px;
+    height: 32px;
+}
+
+#tb-btn-text {
+    font-size: small;
+    display: inline-block;
+    margin-top: 1px; /* Add some spacing between icon and text */
+    margin-bottom: 2px;
+    color: #FEFAE0;
+}
+
+#merge_button:hover #tb-btn-text, #extract_button:hover #tb-btn-text, #save_button:hover #tb-btn-text, #back_button:hover #tb-btn-text, #redu_button:hover #tb-btn-text #undo_button:hover #tb-btn-text{
+    /* background-color: #6464DC; */
+    color: #3333f8;
+    margin: 2px;
+}
+
+#merge_button:active {
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0);
+}
+#extract_button:active {
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0);
+}
+#save_button:active{
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0);
+}
+
+#back_button:active{
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0);
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+.sidebar img {
+    width: 159px;
+    height: 206px;
+}
+
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.98); /* Use a semi-transparent background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    display: none; /* Initially hide the loading screen */
+}
+
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #3498db; /* Set the color of the spinner */
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#back-button-container {
+    display: inline-block;
+    float: left;
+}
+
+#small-button-container {
+    display: inline-block;
+    float: left;
+    margin: 2px 5px;
+}
+
+#menu-button {
+    display: inline-block;
+    background: radial-gradient(circle at center, #ffd900, #f65600);
+    float: left;
+    border-radius: 10px;
+    margin: 2px 10px 2px 2px;
+}
+
+#logo-icon {
+    width: 48px;
+    height: 48px;
+}
+#extract-button {
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    background-color: #4747f89b;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out; /* Add transition for smooth animation */
+    transform-origin: right top; /* Set the transform origin to bottom left corner */
+}
+
+#extract-button:hover {
+    background-color: #4747f8;
+    width: 120px; /* Increase width on hover */
+    height: 40px; /* Increase height on hover */
+    transform: scale(1.2); /* Scale the button on hover */
+}

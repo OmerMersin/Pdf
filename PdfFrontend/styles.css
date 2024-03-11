@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+html{
+	scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	border: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+a,
+a:link,
+a:visited{
+	text-decoration: none;
+	outline: none;
+	border: none;
+}
+
+ul,
+li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+section,
+span,
+p{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: none;
+}
+
+header {
+  background: #282CAF;
+  border-bottom: 3px solid #9B9BF1;
+  width: 80%;
+  z-index: 5;
+  border-radius: 20px;
+  margin: 10px auto;
+}
+
+  /* Add a style reset to remove default margin/padding on body and header */
+body, h1, p, ul {
+	margin: 0;
+	padding: 0;
+  }
+
+.navbar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	width: 100%;
+	padding: 10px 50px;
+	margin-bottom: 30px;
+	font-weight: bold;
+}
+
+.nav-links{
+	display: flex;
+}
+
+.nav-links li a{
+	margin-left: 15px;
+	color: #9B9BF1;
+	padding: 5px 15px;
+	border-radius: 7px;
+	transition: all .2s ease-in-out;
+}
+
+li:last-child{
+	margin-right: 80px;
+}
+
+.nav-links li a:hover{
+	background: #F9F5EB;
+}
+
+.logo h2 a{
+	color:#9B9BF1;
+	text-transform: uppercase;
+}
+
+.dropdown-content {
+	display: none;
+	position: relative;
+	background-color: #F7EFE5;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px #1C3879;
+	z-index: 1;
+	border-radius: 7px;
+  }
+   
+  .dropdown:hover .dropdown-content {
+	display: block;
+	position: absolute;
+  }
+  
+
+  .dropdown-content a {
+	color: #1C3879;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  
+
+  .dropdown-content a:hover {
+	background-color: #1C3879;
+  }
+
+  /*     ANASAYFA      */
+  .body{
+	background-color: #F1F6F9;
+}
+
+.about{
+	margin: 20px 30px;
+	padding: 30px;
+	font-size: 12px;
+	justify-content: space-between;
+	padding: 10px 10px;
+}
+.buyukKutu{
+	display: flex;
+    justify-content: space-around;
+	align-items: center;
+	flex-direction: row;
+}
+.boxOne{
+	flex: 1;
+    height: 450px;
+    background-color: #1c387980;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	/* margin-top: 200px; */
+	margin-left: 200px;
+	margin-bottom: 50px;
+	position: relative;	
+	border-radius: 20px;
+}
+
+.boxOne .about{
+	position: relative;
+	z-index: 1;
+}
+.boxOne label{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+.boxOne label span{
+	margin-bottom: 10px;
+}
+.boxOne input[type="file"]{
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.boxTwo{
+	flex: 1;
+    height: 450px;
+    background-color: #0000008f;
+    display: flex;
+	gap: 10px;
+    justify-content: center;
+    align-items: center;
+	margin-top: 200px;
+	margin-right: 200px;
+	margin-bottom: 50px;
+	position: relative;
+    text-align: center;
+	border-radius: 20px;
+}
+#fileSelectBtn,
+#loginBtn,
+#registerBtn {
+    width: 100px;
+    height: 40px;
+    background-color: #b5bdc5;
+    color: white;
+    border: none;
+    cursor: pointer;
+	border-radius: 5px;
+	padding: 10px 10px;
+	align-items: center;
+}
+
+#loginBtn:hover,
+#registerBtn:hover {
+    background-color: #0056b3;
+}
+#fileSelectBtn:hover{
+	background-color: #000000;
+}
+
+  /*     ABOUT      */
+
+  .about{
+	margin-bottom: 150px;
+  }
+  .about-title{
+	margin: 60px 0;
+  }
+
+  .about-title h2{
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	color: #1C3879;
+	font-size: 30px;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+  }
+
+  .about-title h2::after{
+	content: "";
+	width: 500px;
+	height: 3px;
+	background-color: #1C3879;
+	margin: 0 auto;
+	display: block;
+	margin-top: 10px;
+  }
+
+  .about-content{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+  }
+
+  .about-img{
+	width: 40%;
+  }
+
+  .about-img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+
+  .pdf-img{
+	width: 40%;
+	height: 40%;
+  }
+
+  .pdf-img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+
+  .about-text{
+	width: 40%;
+  }
+
+  h4{
+	margin-bottom: 25px;
+	text-align: center;
+	font-size: 40px;
+	color: #1C3879;
+	font-family: "Herr Von Muellerhoff", cursive;
+	letter-spacing: 0.5rem;
+	font-weight: 100;
+  }
+
+  #asterisk{
+	color: #1C3879;
+	margin-bottom: 25px;
+	text-align: center;
+	font-size: 30px;
+  }
+
+  .about-text p{
+	font-size: 20px;
+	text-align: center;
+	color:#1C3879;
+  }
+
+/*     PORTFOLİO       */
+
+.portfolio{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.portfolio-item{
+	width: 25%;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+}
+
+.portfolio-item img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: .5s;
+}
+
+.overlay{
+	width: 100%;
+	height: 100%;
+	background-color: #1C3879;
+	position: absolute;
+	top: 100;
+	left: 0;
+	opacity: 0.8;
+	color: #F7EFE5;
+	font-size: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .5s;
+}
+
+.portfolio-item:hover .overlay{
+	top: 0;
+}
+
+.portfolio-item:hover img{
+	transform: scale(1.1);
+}
+
+.back-img {
+	width: 800px;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#userInfo {
+margin: 10px;
+}
